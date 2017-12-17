@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id={{ chartID|safe }} class="chart" style="height: 500px"></div>
+	<script>
+		var chart_id = {{ chartID|safe }}
+		var series = {{ series|safe }}
+		var title = {{ title|safe }}
+		var subtitle = {{ subtitle|safe }}
+		var xAxis = {{ xAxis|safe }}
+		var yAxis = {{ yAxis|safe }}
+		var chart = {{ chart|safe }}
+	</script>
+	<script src="{{ url_for('static', filename='js/highcharts.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
